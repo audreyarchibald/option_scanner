@@ -1,0 +1,8 @@
+aiohttp
+numpy
+scipy
+polars
+plotly
+python-dotenv
+requests
+pandas
