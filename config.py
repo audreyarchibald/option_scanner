@@ -5,7 +5,7 @@ load_dotenv()
 
 # API Configuration
 POLYGON_API_KEY = os.getenv("POLYGON_API_KEY", "YOUR_POLYGON_KEY")
-DATA_PROVIDER = os.getenv("DATA_PROVIDER", "polygon")
+DATA_PROVIDER = os.getenv("DATA_PROVIDER", "polygon") # Options: "polygon", "yfinance"
 
 # Risk Free Rate (can be fetched dynamically, but hardcoded for now)
 RISK_FREE_RATE = 0.045  # 4.5%

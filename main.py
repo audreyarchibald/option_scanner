@@ -7,6 +7,7 @@ from datetime import datetime
 from config import DATA_PROVIDER, REPORTS_DIR, CHARTS_DIR
 from utils.logger import logger
 from data.polygon_provider import PolygonProvider
+from data.yfinance_provider import YFinanceProvider
 from scanners.iv_scanner import scan_iv
 from scanners.uoa_scanner import scan_uoa
 from scanners.delta_scanner import scan_delta
@@ -132,6 +133,8 @@ async def main():
     # Initialize Provider
     if DATA_PROVIDER.lower() == "polygon":
         provider = PolygonProvider()
+    elif DATA_PROVIDER.lower() == "yfinance":
+        provider = YFinanceProvider()
     else:
         logger.error(f"Unknown provider: {DATA_PROVIDER}")
         return
